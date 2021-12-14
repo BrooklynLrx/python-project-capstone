@@ -1,0 +1,22 @@
+Use case modeling
+
+Actor 1: Customer
+
+Goals: 
+To search for a car
+To book a car
+
+
+
+
+Actor 2: Staff
+Goals:
+1.  To enter new-car information 
+
+     
+
+Actor 3: Manager
+Goal:
+ To generate weekly rental report
+
+Other actors: Card system, QBEI insurance

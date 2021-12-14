@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block body %}
+<br>
+
+<b><h3 class = "tab">Choose your burger</h3></b>
+<form method="POST">
+<h3 class = "tab">
+<table class = "striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Type</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+        <td>Flat_bread</td>
+        <td>$1</td>
+        <td>wrap</td>
+        <td><input type="number" name="qty" placeholder="quantity"></td>
+        </tr>
+        <tr>
+        <td>Whole_wheat</td>
+        <td>$2</td>
+        <td>wrap</td>
+        <td><input type="number" name="qty1" placeholder="quantity"></td>
+        </tr>
+        <tr>
+        <td>chicken</td>
+        <td>$2</td>
+        <td>patties</td>
+        <td><input type="number" name="qty2" placeholder="quantity"></td>
+
+        </tr>
+        <tr>
+        <td>beef</td>
+        <td>$2</td>
+        <td>patties</td>
+        <td><input type="number" name="qty3" placeholder="quantity"></td>
+
+        </tr>
+        <tr>
+        <td>vegeterian</td>
+        <td>$1</td>
+        <td>patties</td>
+        <td><input type="number" name="qty4" placeholder="quantity"></td>
+
+        </tr>
+    
+        <tr>
+        <td>tomato</td>
+        <td>$1</td>
+        <td>ingredients</td>
+        <td><input type="number" name="qty5" placeholder="quantity"></td>
+
+        </tr>
+        <tr>
+        <td>lettuce</td>
+        <td>$1</td>
+        <td>ingredients</td>
+        <td><input type="number" name="qty6" placeholder="quantity"></td>
+
+        </tr>
+        <tr>
+        <td>cheese</td>
+        <td>$2</td>
+        <td>ingredients</td>
+        <td><input type="number" name="qty7" placeholder="quantity"></td>
+
+        </tr>
+    </tbody>
+    </table>
+
+    <button type="submit" name="make" onclick="">Make booking</button>
+</h3>
+</form>
+
+
+{% endblock %}
+

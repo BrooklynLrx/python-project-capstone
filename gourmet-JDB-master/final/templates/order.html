@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block body %}
+{% if main is not defined and system is not defined %}
+<p>
+    <h3>There is nothing in your order!</h3>
+    </p>
+{% endif %}
+{% if main is defined and system is defined%}
+<p>
+    <h3>Check Your Order</h3>
+    </p>
+<h3 class = "tab">
+    <table class = "striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Ingredients</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            {% if tp == 'burger' %}
+            <tr>
+            <td>Burger</td>
+            <td>{% if main.qty > 0 %} Seasame bun: {{main.qty}} {% endif %}
+                {% if main.qty1 > 0 %} Muffin bun: {{main.qty1}} {% endif %} 
+                {% if main.qty2 > 0 %} Chicken Patties: {{main.qty2}} {% endif %} <br>
+                {% if main.qty3 > 0 %} Beef Patties: {{main.qty3}} {% endif %}
+                {% if main.qty4 > 0 %} Tomato: {{main.qty4}} {% endif %}
+                {% if main.qty5 > 0 %} Lettuce: {{main.qty5}} {% endif %}
+                {% if main.qty6 > 0 %} Cheese: {{main.qty6}} {% endif %}
+            </td>
+            <td> {{main.main_fee()}} </td>
+            </tr>
+            {% endif %}
+            
+            {% if tp == 'Wrap' %}
+            <tr>
+            <td>Wrap</td>
+            <td>{% if main.qty > 0 %} Flat bread: {{main.qty}} {% endif %}
+                {% if main.qty1 > 0 %} Whole wheat: {{main.qty1}} {% endif %} 
+                {% if main.qty2 > 0 %} Chicken Patties: {{main.qty2}} {% endif %} <br>
+                {% if main.qty3 > 0 %} Beef Patties: {{main.qty3}} {% endif %}
+                {% if main.qty4 > 0 %} Tomato: {{main.qty4}} {% endif %}
+                {% if main.qty5 > 0 %} Lettuce: {{main.qty5}} {% endif %}
+                {% if main.qty6 > 0 %} Cheese: {{main.qty6}} {% endif %}
+            </td>
+            <td> {{main.main_fee()}} </td>
+            </tr>
+            {% endif %}
+
+
+
+            <!-- <tr>
+            <td>Wrap</td>
+            <td>$5</td>
+            <td><a href="{{ url_for('burger') }}" class="waves-effect waves-light btn-small">order</a></td>
+            </tr> -->
+            
+        </tbody>
+        </table>
+    </h3>
+
+{% endif %}
+
+{% endblock %}

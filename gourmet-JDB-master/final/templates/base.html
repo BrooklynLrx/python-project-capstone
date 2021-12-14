@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gourmet burger System!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        div{
+            color: aqua;
+            margin-left: 40px;
+        }
+
+        .tab{
+            margin-left: 200px;
+            font-size: 20pt;
+            margin-right: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+<div class="nav-wrapper">
+    <a href="#!" class="brand-logo center">JDB's burger shop</a>
+    <ul class="left hide-on-med-and-down">
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('Mains') }}">Mains</a></li>
+    <li><a href="{{ url_for('Order') }}">My Order</a></li>
+    </ul>
+</div>
+</nav>
+
+
+<br>
+
+<!-- Main Content -->
+{% block body %}{% endblock %}
+
+</body>
+</html>

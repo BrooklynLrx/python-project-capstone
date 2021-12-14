@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<br>
+
+<b><h3 class = "tab">Choose your mains</h3></b>
+<form method="POST">
+<h3 class = "tab">
+<table class = "striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Base Price</th>
+            
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+        <td>Burger</td>
+        <td>$4</td>
+        <td><a href="{{ url_for('burger') }}" class="waves-effect waves-light btn-small">order</a></td>
+        </tr>
+        <tr>
+        <td>wrap</td>
+        <td>$5</td>
+        <td><a href="{{ url_for('wrap') }}" class="waves-effect waves-light btn-small">order</a></td>
+        </tr>
+        
+    </tbody>
+    </table>
+</h3>
+</form>
+
+{% endblock %}
